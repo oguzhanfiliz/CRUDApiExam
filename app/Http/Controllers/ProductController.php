@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function __invoke(Request $request)
+    {
+        return "{status : success}";
+    }
     /**
      * Display a listing of the resource.
      *
