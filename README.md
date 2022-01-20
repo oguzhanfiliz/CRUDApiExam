@@ -9,7 +9,7 @@
 [comment]: <> (<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>)
 
 [comment]: <> (</p>)
-
+## İçindekiler
 1. [Clone](#clone)
 2. [Authentication](#authentication)
 3. [Register](#register)
@@ -84,7 +84,7 @@ http://localhost:8000/api/register
 ```
 
 
-
+**[⬆ başa dön](#İçindekiler)**
 ### Login
 
 ```http request
@@ -98,13 +98,13 @@ http://localhost:8000/api/login
 }
 ```
 
-
+**[⬆ başa dön](#İçindekiler)**
 ### Logout
 
 ```http request
 http://localhost:8000/api/logout
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Product Get
 
 ```http request
@@ -124,7 +124,7 @@ http://localhost:8000/api/products/4
     }
 ]
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Product Get All
 ```http request
 http://localhost:8000/api/products
@@ -179,7 +179,7 @@ http://localhost:8000/api/products
     }
 ]
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Create Product
 ```http request
 http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&description=abcsss&price=555
@@ -193,7 +193,7 @@ http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&descrip
     'price' : '555'
 }
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Update product
 ```http request
 http://localhost:8000/api/products/3
@@ -204,12 +204,12 @@ http://localhost:8000/api/products/3
 }
 
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Delete Product
 ```http request
 http://localhost:8000/api/products/5
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Search Product
 ```http request
 http://localhost:8000/api/products/search/example
@@ -228,7 +228,7 @@ http://localhost:8000/api/products/search/example
     }
 ]
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Orders get 
  **The order date has not arrived and the user added** 
 
@@ -251,7 +251,7 @@ http://localhost:8000/api/orders
     }
 ]
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### New Order
 ```http request
 http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&productID=6&shippingDate=22-01-2023
@@ -270,7 +270,7 @@ http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&pro
     "id": 7
 }
 ```
-
+**[⬆ başa dön](#İçindekiler)**
 ### Order Update
 ```http request
 http://localhost:8000/api/orders/17?shippingDate=2022-02-12
@@ -283,6 +283,8 @@ http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 
 
 ```
+
+**[⬆ başa dön](#İçindekiler)**
 ### Order Search
 ```http request
 http://localhost:8000/api/orders/search/sipa
@@ -306,3 +308,6 @@ http://localhost:8000/api/orders/search/sipa
 
 
 Created Oğuzhan Filiz
+
+
+**[⬆ başa dön](#İçindekiler)**
