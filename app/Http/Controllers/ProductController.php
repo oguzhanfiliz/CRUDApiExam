@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function __invoke(Request $request)
-    {
-        return "{status : success}";
+    public function __invoke(Request $request){
+
     }
     /**
      * Display a listing of the resource.
@@ -20,15 +19,7 @@ class ProductController extends Controller
         return Product::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,7 +34,12 @@ class ProductController extends Controller
         'slug' => 'required',
         'price' => 'required']
         );
-        return Product::create($request->all());
+        $data = new Product;
+        $data->name = $request->input("name");
+        $data->slug = $request->input("slug");
+        $data->price = $request->input("price");
+        $data->description = $request->input("description");
+        return $data->save();
     }
 
     /**
@@ -52,6 +48,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         return Product::find($id);
@@ -90,7 +87,18 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        return Product::destroy($id);
+        $temp = Product::destroy($id);
+        if($temp){
+        return [
+            "status"=> "succcess",
+            "message" => "Deleted item id : $id"
+        ];
+        }else{
+            return [
+                'status' => "error",
+                "message" => "Don't delete item id :  $id"
+            ];
+        }
     }
 
     /**
