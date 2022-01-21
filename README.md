@@ -70,7 +70,7 @@ return api key.
 ## Authentication
 ### Register
 
-```http request
+```json
 http://localhost:8000/api/register
 ```
 
@@ -88,7 +88,7 @@ http://localhost:8000/api/register
 **[⬆ return top](#İçindekiler)**
 ### Login
 
-```http request
+```json
 http://localhost:8000/api/login
 ```
 
@@ -102,13 +102,13 @@ http://localhost:8000/api/login
 **[⬆ return top](#İçindekiler)**
 ### Logout
 
-```http request
+```json
 http://localhost:8000/api/logout
 ```
 **[⬆ return top](#İçindekiler)**
 ### Product Get
 
-```http request
+```json
 http://localhost:8000/api/products/4
 ```
 
@@ -127,7 +127,7 @@ http://localhost:8000/api/products/4
 ```
 **[⬆ return top](#İçindekiler)**
 ### Product Get All
-```http request
+```json
 http://localhost:8000/api/products
 ```
 ```json
@@ -182,7 +182,7 @@ http://localhost:8000/api/products
 ```
 **[⬆ return top](#İçindekiler)**
 ### Create Product
-```http request
+```json
 http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&description=abcsss&price=555
 ```
 
@@ -196,7 +196,7 @@ http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&descrip
 ```
 **[⬆ return top](#İçindekiler)**
 ### Update product
-```http request
+```json
 http://localhost:8000/api/products/3
 ```
 ```json
@@ -207,12 +207,12 @@ http://localhost:8000/api/products/3
 ```
 **[⬆ return top](#İçindekiler)**
 ### Delete Product
-```http request
+```json
 http://localhost:8000/api/products/5
 ```
 **[⬆ return top](#İçindekiler)**
 ### Search Product
-```http request
+```json
 http://localhost:8000/api/products/search/example
 ```
 
@@ -233,7 +233,7 @@ http://localhost:8000/api/products/search/example
 ### Orders get 
  **The order date has not arrived and the user added** 
 
-```http request
+```json
 http://localhost:8000/api/orders
 ```
 
@@ -254,7 +254,7 @@ http://localhost:8000/api/orders
 ```
 **[⬆ return top](#İçindekiler)**
 ### New Order
-```http request
+```json
 http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&productID=6&shippingDate=22-01-2023
 ```
 
@@ -287,7 +287,7 @@ http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 
 **[⬆ return top](#İçindekiler)**
 ### Order Search
-```http request
+```json
 http://localhost:8000/api/orders/search/sipa
 ```
 
@@ -308,7 +308,7 @@ http://localhost:8000/api/orders/search/sipa
 ```
 ## Docker
 **Clone**
-```http request
+```json
 git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git
 cd /PathCaseCRUDAPI
 ```
