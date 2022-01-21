@@ -70,11 +70,11 @@ return api key.
 ## Authentication
 ### Register
 
-```json
-http://localhost:8000/api/register
+```javascript
+  http://localhost:8000/api/register
 ```
 
-```json
+```javascript
 {
     'name' : 'example',
     'email' : 'example@gmail.com',
@@ -88,11 +88,11 @@ http://localhost:8000/api/register
 **[⬆ return top](#İçindekiler)**
 ### Login
 
-```json
+```javascript
 http://localhost:8000/api/login
 ```
 
-```json 
+```javascript 
 {
     'email' : 'example@gmail.com',
     'password' : '123456'
@@ -102,13 +102,13 @@ http://localhost:8000/api/login
 **[⬆ return top](#İçindekiler)**
 ### Logout
 
-```json
+```javascript
 http://localhost:8000/api/logout
 ```
 **[⬆ return top](#İçindekiler)**
 ### Product Get
 
-```json
+```javascript
 http://localhost:8000/api/products/4
 ```
 
@@ -127,10 +127,10 @@ http://localhost:8000/api/products/4
 ```
 **[⬆ return top](#İçindekiler)**
 ### Product Get All
-```json
+```javascript
 http://localhost:8000/api/products
 ```
-```json
+```javascript
 
 [
     {
@@ -182,11 +182,11 @@ http://localhost:8000/api/products
 ```
 **[⬆ return top](#İçindekiler)**
 ### Create Product
-```json
+```javascript
 http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&description=abcsss&price=555
 ```
 
-```json
+```javascript
 {
     'name': 'example',
     'slug': 'example',
@@ -196,10 +196,10 @@ http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&descrip
 ```
 **[⬆ return top](#İçindekiler)**
 ### Update product
-```json
+```javascript
 http://localhost:8000/api/products/3
 ```
-```json
+```javascript
 {
     'price' : '444'
 }
@@ -207,16 +207,16 @@ http://localhost:8000/api/products/3
 ```
 **[⬆ return top](#İçindekiler)**
 ### Delete Product
-```json
+```javascript
 http://localhost:8000/api/products/5
 ```
 **[⬆ return top](#İçindekiler)**
 ### Search Product
-```json
+```javascript
 http://localhost:8000/api/products/search/example
 ```
 
-```json
+```javascript
 [
     {
         "id": 1,
@@ -233,11 +233,11 @@ http://localhost:8000/api/products/search/example
 ### Orders get 
  **The order date has not arrived and the user added** 
 
-```json
+```javascript
 http://localhost:8000/api/orders
 ```
 
-```json
+```javascript
 [
     {
         "id": 7,
@@ -254,11 +254,11 @@ http://localhost:8000/api/orders
 ```
 **[⬆ return top](#İçindekiler)**
 ### New Order
-```json
+```javascript
 http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&productID=6&shippingDate=22-01-2023
 ```
 
-```json
+```javascript
 {
     "name": "Siparis35",
     "customerID": 7,
@@ -273,11 +273,11 @@ http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&pro
 ```
 **[⬆ return top](#İçindekiler)**
 ### Order Update
-```json
+```javascript
 http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 ```
 
-```json
+```javascript
 {
     'shippingDate': '2022-02-12'
 }
@@ -287,11 +287,11 @@ http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 
 **[⬆ return top](#İçindekiler)**
 ### Order Search
-```json
+```javascript
 http://localhost:8000/api/orders/search/sipa
 ```
 
-```json
+```javascript
 [
     {
         "id": 7,
@@ -308,7 +308,7 @@ http://localhost:8000/api/orders/search/sipa
 ```
 ## Docker
 **Clone**
-```json
+```javascript
 git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git
 cd /PathCaseCRUDAPI
 ```
@@ -321,14 +321,14 @@ docker compose up -d
 ```
 Go to container sh
 
-```json
+```javascript
 docker exec -it laravel /bin/sh
 ```
 
 **DB migration**
 
 seed optional
-```json
+```javascript
 php artisan migrate --seed
 ```
 if you get an error change "migrate" to "migrate:refresh" 
