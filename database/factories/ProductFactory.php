@@ -24,8 +24,8 @@ class ProductFactory extends Factory
         return array(
             'name'=>$this->faker->sentence(rand(3,7)),
             'slug'=>$this->faker->sentence(rand(3,7)),
-            'price'=>$this->faker->unique()->randomDigit,
-            'description'=>$this->faker->text(200),
+            'price'=>$this->faker->numberBetween($min = 1, $max = 50),
+            'description'=>$this->faker->text(50),
 
         );
     }

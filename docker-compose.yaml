@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel
+    command: 'php artisan serve --host=0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    networks:
+      - backend-nw
+
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: queue
+    command: 'php artisan queue:work'
+    depends_on:
+      - db
+    networks:
+      - backend-nw
+
+  db:
+    platform: linux/x86_64
+    image: mysql:8.0
+    container_name: db
+    environment:
+      MYSQL_DATABASE: laravelpath
+      MYSQL_USER: admin
+      MYSQL_ROOT: root
+      MYSQL_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - ./storage/dbdata:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - backend-nw
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    container_name: phpmyadmin
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT: root
+      MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - backend-nw
+
+networks:
+  backend-nw:
+

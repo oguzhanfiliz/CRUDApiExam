@@ -10,6 +10,7 @@
 
 [comment]: <> (</p>)
 ## İçindekiler
+Docker [Docker](#docker)
 1. [Clone](#clone)
 2. [Authentication](#authentication)
 3. [Register](#register)
@@ -305,6 +306,35 @@ http://localhost:8000/api/orders/search/sipa
     }
 ]
 ```
+## Docker
+**Clone**
+```http request
+git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git
+cd /PathCaseCRUDAPI
+```
+**Docker Compose Run**
+
+detach mode optional
+
+``` dockerfile
+docker compose up -d
+```
+Go to container sh
+
+```json
+docker exec -it laravel /bin/sh
+```
+
+**DB migration**
+
+seed optional
+```json
+php artisan migrate --seed
+```
+if you get an error change "migrate" to "migrate:refresh" 
+
+Success...
+
 
 
 Created Oğuzhan Filiz

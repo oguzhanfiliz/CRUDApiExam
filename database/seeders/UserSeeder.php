@@ -13,12 +13,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+
+
+        \App\Models\User::factory(9)->create();
         \App\Models\User::insert(['name' => "Oğuzhan Filiz",
             'email' => "oguzhanfiliz@outlook.com",
             'email_verified_at' => now(),
-            'password' => '$2y$10$B1igxJ5EZuhKdpDfdrFXL.41A8a74AMcR0CtckaDn/1s8z1juDPoi', // hayret1sey
+            'password' => '$2y$10$weeFqj/w8iDYs.17gvPqqO0jEpIjt7HcwVQHnED.yE3Y83VLtOjnK', // 123456
             'remember_token' => Str::random(10),]);
-
-        \App\Models\User::factory(5)->create();
     }
 }

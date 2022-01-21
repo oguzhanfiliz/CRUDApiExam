@@ -38,7 +38,7 @@ class AuthController extends Controller
         if(!$user || !Hash::check($fields['password'],$user->password)){
             return response([
                'status' => 'error',
-               'message' => 'Bad creds'
+               'message' => 'Userename Password Error'
             ],401);
         }
         $token = $user->createToken('account_auth_token')->plainTextToken;
