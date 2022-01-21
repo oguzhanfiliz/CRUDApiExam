@@ -309,8 +309,9 @@ http://localhost:8000/api/orders/search/sipa
 ## Docker
 **Clone**
 ```javascript
-git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git
-cd /PathCaseCRUDAPI
+git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git 
+cd ./PathCaseCRUDAPI 
+composer install
 ```
 **Docker Compose Run**
 
@@ -334,6 +335,19 @@ php artisan migrate --seed
 if you get an error change "migrate" to "migrate:refresh" 
 
 Success...
+
+
+## Docker Magic
+
+```javascript
+git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git 
+cd ./PathCaseCRUDAPI 
+composer install
+docker compose up -d
+docker exec -it laravel /bin/sh
+php artisan migrate --seed
+```
+
 
 
 
