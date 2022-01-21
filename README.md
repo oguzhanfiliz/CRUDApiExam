@@ -273,7 +273,7 @@ http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&pro
 ```
 **[⬆ return top](#İçindekiler)**
 ### Order Update
-```http request
+```json
 http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 ```
 
