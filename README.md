@@ -92,7 +92,7 @@ return api key.
 http://localhost:8000/api/login
 ```
 
-```javascript 
+```json 
 {
     'email' : 'example@gmail.com',
     'password' : '123456'
@@ -112,7 +112,7 @@ http://localhost:8000/api/logout
 http://localhost:8000/api/products/4
 ```
 
-```javascript
+```json
 [
     {
     "id": 4,
@@ -130,7 +130,7 @@ http://localhost:8000/api/products/4
 ```javascript
 http://localhost:8000/api/products
 ```
-```javascript
+```json
 
 [
     {
@@ -186,7 +186,7 @@ http://localhost:8000/api/products
 http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&description=abcsss&price=555
 ```
 
-```javascript
+```json
 {
     'name': 'example',
     'slug': 'example',
@@ -199,7 +199,7 @@ http://localhost:8000/api/products?name=iphonesssssss&slug=iphonesssssss&descrip
 ```javascript
 http://localhost:8000/api/products/3
 ```
-```javascript
+```json
 {
     'price' : '444'
 }
@@ -216,7 +216,7 @@ http://localhost:8000/api/products/5
 http://localhost:8000/api/products/search/example
 ```
 
-```javascript
+```json
 [
     {
         "id": 1,
@@ -237,7 +237,7 @@ http://localhost:8000/api/products/search/example
 http://localhost:8000/api/orders
 ```
 
-```javascript
+```json
 [
     {
         "id": 7,
@@ -258,7 +258,7 @@ http://localhost:8000/api/orders
 http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&productID=6&shippingDate=22-01-2023
 ```
 
-```javascript
+```json
 {
     "name": "Siparis35",
     "customerID": 7,
@@ -277,7 +277,7 @@ http://localhost:8000/api/orders?name=Siparis35&quantity=25&address=Kütahya&pro
 http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 ```
 
-```javascript
+```json
 {
     'shippingDate': '2022-02-12'
 }
@@ -291,7 +291,7 @@ http://localhost:8000/api/orders/17?shippingDate=2022-02-12
 http://localhost:8000/api/orders/search/sipa
 ```
 
-```javascript
+```json
 [
     {
         "id": 7,
