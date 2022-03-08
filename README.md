@@ -9,7 +9,7 @@
 [comment]: <> (<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>)
 
 [comment]: <> (</p>)
-## İçindekiler
+## Ingredients
 Docker [Docker](#docker)
 1. [Clone](#clone)
 2. [Authentication](#authentication)
@@ -347,13 +347,19 @@ Success...
 ## Docker Magic
 
 ```javascript
-git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git 
-cd ./PathCaseCRUDAPI 
-composer install
-docker compose up -d
-docker exec -it laravel /bin/sh
-php artisan migrate --seed
+sudo wget https://raw.githubusercontent.com/oguzhanfiliz/PathCaseCRUDAPI/main/start.sh
+chmod 777 ./start.sh
+sudo ./start.sh
 ```
+
+please wait 1 minute and start db migration in laravel container sh
+
+```javascript
+
+php artisan migrate --seed
+
+```
+
 
 
 
