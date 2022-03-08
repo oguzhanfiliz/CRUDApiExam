@@ -28,7 +28,6 @@ services:
       - backend-nw
 
   db:
-    platform: linux/x86_64
     image: mysql:8.0
     container_name: db
     environment:
