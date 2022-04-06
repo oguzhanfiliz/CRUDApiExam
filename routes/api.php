@@ -25,6 +25,7 @@ Route::post('/login',[AuthController::class, 'login']);
 //Route::get('/products',[ProductController::class,'index']);
 //Protected routes
 Route::group(['middleware'=>['auth:sanctum']],function(){
+
     Route::post('/products',[ProductController::class, 'store']);
     Route::get('/products',[ProductController::class, 'index']);
     Route::get('/products/{id}',[ProductController::class, 'show']);
@@ -38,6 +39,7 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
     Route::get('/orders/search/{name}',[CustomerOrdersController::class,'search']);
     Route::delete('/orders/{id}',[CustomerOrdersController::class, 'destroy']);
     Route::post('/logout',[CustomerOrdersController::class, 'logout']);
+    
 });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
