@@ -28,4 +28,5 @@ class CustomerOrdersSeeder extends Seeder
             'shippingDate'=> $date->addWeeks(rand(1, 52))->format('Y-m-d H:i:s'),
             ]);
     }
+    
 }
