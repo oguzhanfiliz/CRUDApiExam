@@ -35,11 +35,11 @@ Docker [Docker](#docker)
 
 ### Clone
 ```gitexclude
-git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git
+git clone https://github.com/oguzhanfiliz/CRUDApiExam.git
 
 ```
 ```
-cd PathCaseCRUDAPI
+cd CRUDApiExam
 ```
 
 ```
@@ -318,8 +318,8 @@ http://localhost:8000/api/orders/search/sipa
 ## Docker
 **Clone**
 ```javascript
-git clone https://github.com/oguzhanfiliz/PathCaseCRUDAPI.git 
-cd ./PathCaseCRUDAPI 
+git clone https://github.com/oguzhanfiliz/CRUDApiExam.git 
+cd ./CRUDApiExam 
 composer install
 ```
 **Docker Compose Run**
@@ -349,7 +349,7 @@ Success...
 ## Docker Magic
 
 ```javascript
-sudo wget https://raw.githubusercontent.com/oguzhanfiliz/PathCaseCRUDAPI/main/start.sh
+sudo wget https://raw.githubusercontent.com/oguzhanfiliz/CRUDApiExam/main/start.sh
 chmod 777 ./start.sh
 sudo ./start.sh
 ```
